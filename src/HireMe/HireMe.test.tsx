@@ -3,9 +3,8 @@ import { render } from '@testing-library/react';
 import { HireMe } from './HireMe';
 
 describe('HireMe tests', () => {
-  it(' should display the component name and prop.', () => {
-    const { getByText, queryByText } = render(<HireMe />);
-
+  it(' should display the h1 title.', () => {
+    const { getByText } = render(<HireMe />);
     expect(getByText('About me, Dragon Messmer.')).toBeDefined();
   });
 });
