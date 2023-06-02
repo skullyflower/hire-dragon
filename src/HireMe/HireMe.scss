@@ -1,4 +1,7 @@
-header, footer {display:none}
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+html * {
+  font-family: 'Work Sans', sans-serif;
+}
 #content{
   position:relative;
   font-size:14px;
@@ -36,6 +39,7 @@ h1 {
   font-size:4em;
   margin-bottom:0;
   padding:0 40px;
+  font-weight: bolder;
 }
 p{
   font-size:1.5em;
