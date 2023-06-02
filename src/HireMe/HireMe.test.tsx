@@ -6,7 +6,6 @@ describe('HireMe tests', () => {
   it(' should display the component name and prop.', () => {
     const { getByText, queryByText } = render(<HireMe />);
 
-    expect(queryByText('HireMe')).toBeDefined();
-    expect(getByText('something')).toBeDefined();
+    expect(getByText('About me, Dragon Messmer.')).toBeDefined();
   });
 });

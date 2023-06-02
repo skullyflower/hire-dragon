@@ -71,10 +71,11 @@ export const HireMe = () => {
                   systems, and the end users of what I&apos;m working on in mind. It makes me better
                   at communicating technical subjects to non engineers than some.
                 </p>
+                <p>When I can, I draw monsters and comics. I also occasionally paint.</p>
               </>
             )}
             <p
-              style={{ textAlign: 'right', cursor: 'pointer' }}
+              style={{ fontSize: '1em', textAlign: 'right', cursor: 'pointer' }}
               onClick={() => setTextExpaned(!textExpanded)}
             >
               {textExpanded ? '... Show less' : 'Show more ...'}
