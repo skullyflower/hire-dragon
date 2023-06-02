@@ -8,7 +8,7 @@ const linksArray = [
   },
   { name: 'GitHub', href: 'https://www.github.com/skullyflower' },
   { name: 'Resumé', href: '/DragonMessmerResume.pdf' },
-  { name: 'Instagram', href: 'https://www.instagram.com/dragonmessmer' },
+  { name: 'Hello Calculator', href: '/calc' },
   { name: 'Skullyflower', href: 'https://www.skullyflower.com' },
 ];
 

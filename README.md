@@ -1,5 +1,7 @@
 # hire-dragon
 
-To install run # yarn
+Animated Hire me page with links to linkedin, github, resume and code examples.
 
-built using Ante's Barebones React/TypeScript/Vite app with ESLint and Prettier configs included
+It's a React/TypeScript/Vite app with ESLint and Prettier configs, react-router, vitest
+
+Started with github template, Ante's Barebones React/TypeScript/Vite app with ESLint and Prettier configs included
