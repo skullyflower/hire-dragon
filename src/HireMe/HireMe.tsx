@@ -4,7 +4,7 @@ import './HireMe.scss';
 const linksArray = [
   {
     name: 'LinkedIn',
-    href: "'https://www.linkedin.com/in/skullyflower'",
+    href: 'https://www.linkedin.com/in/skullyflower',
   },
   { name: 'GitHub', href: 'https://www.github.com/skullyflower' },
   { name: 'Resumé', href: '/DragonMessmerResume.pdf' },
