@@ -34,6 +34,9 @@ html * {
     height: 0px;
     overflow: hidden;
   }
+  &+p{
+    margin:10px;
+  }
 }
 h1 {
   font-size:4em;
@@ -43,7 +46,7 @@ h1 {
 }
 p{
   font-size:1.5em;
-  margin-bottom: 2em;  
+  margin-bottom: 1.6em;  
   padding:0 40px;
 }
 .links{
