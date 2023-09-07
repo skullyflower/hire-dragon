@@ -8,8 +8,9 @@ const linksArray = [
   },
   { name: 'GitHub', href: 'https://www.github.com/skullyflower' },
   { name: 'Resumé', href: '/DragonMessmerwebResume.pdf' },
-  { name: 'Hello Calculator', href: '/calc' },
   { name: 'Skully Flower', href: 'https://www.skullyflower.com' },
+  { name: 'Doug Mac Art', href: 'https://dougmac.skullyflower.com' },
+  { name: 'Hello Calculator', href: '/calc' },
 ];
 
 type SlideLinkType = { name: string; href: string };
@@ -34,12 +35,20 @@ export const HireMe = () => {
           <div className={textExpanded ? 'description expanded' : 'description'}>
             <h3 style={{ textAlign: 'center' }}>An adaptable and well rounded software engineer</h3>
             <p>
-              I&apos;ve been learning and applying new languages and methodologies since my first
-              tech gig. I barely knew HTML before I had to start scripting in PHP. The next job
-              required Javascript which is a very different language from PHP.
+              &ldquo;Dragon is a fantastic front-end developer who is an asset to every team she
+              joins. She brings both deep technical knowledge and a willingness to jump in and help
+              with anything. In fact, that customer focus/product mindset is one of her biggest
+              strengths. She was often requested by name by our professional services customers
+              because of her attention to detail and focus on helping the customer achieve their
+              vision.&rdquo; - <i>Aaron Witt, engineering leader</i>
             </p>
             {textExpanded && (
               <>
+                <p>
+                  I&apos;ve been learning and applying new languages and methodologies since my
+                  first tech gig. I barely knew HTML before I had to start scripting in PHP. The
+                  next job required Javascript which is a very different language from PHP.
+                </p>
                 <p>
                   I have finally abandoned the impostor syndrome. I&apos;ve proven I can learn
                   anything and apply it in a professional setting, rather quickly. I ask questions,
@@ -65,7 +74,7 @@ export const HireMe = () => {
             style={{ fontSize: '1em', textAlign: 'right', cursor: 'pointer' }}
             onClick={() => setTextExpaned(!textExpanded)}
           >
-            {textExpanded ? '... Show less' : 'Show more ...'}
+            {textExpanded ? 'Show less' : '... Show more'}
           </p>
           <div className='links'>
             {linksArray.map((link) => (
