@@ -57,20 +57,21 @@ export const HireMe = () => {
                   My passion is bringing excellent designs to life with real data. I work well with
                   in cross functional teams, boldly and tenaciously meeting the challenges of good
                   UX design or complex data manipulations. I have experience creating fully
-                  responsive sites from scratch in pure css and html, and also with the aid of UI
-                  frameworks. I have a record of delighting impossible to please clients.
+                  responsive sites from scratch in pure css, but also with the aid of UI frameworks,
+                  like Bootstrap. I have a record of delighting impossible to please clients.
                 </p>
                 <p>
-                  A child of chaotic circumstances, I&apos;m the first in my family to have a
-                  professional career. I enjoy the quiet control of being able to make functioning
-                  machines out of typed script. When I&apos;m not coding, I&apos;m creating
-                  creatures and worlds in ink and paper. Socially, I&apos;m compassionate and
-                  supportive, but also quick to laugh and joke around.
+                  I come from a troubled family and am the only one who was able to get out of
+                  poverty and into a career. I&apos;d say I&apos;m self taught, I&apos;ve never
+                  formally studied computers, but actually I&apos;ve been taught by the multitudes
+                  of voices, in books and across the internet, and from the people and code
+                  I&apos;ve worked with. I&apos;ve also figured an awful lot out on my own.
                 </p>
                 <p>
-                  Professionally, I have finally abandoned the impostor syndrome. I&apos;ve proven I
-                  can learn anything and apply it in a professional setting, rather quickly. I ask
-                  questions, look things up, and ask for help.
+                  <b>Socially</b>, I&apos;m compassionate and supportive, but also quick to laugh
+                  and joke around. <b>Professionally</b>, I have finally abandoned the impostor
+                  syndrome. I&apos;ve proven I can learn anything and apply it in a professional
+                  setting, rather quickly. I ask questions, look things up, and ask for help.
                 </p>
                 <p>
                   I&apos;ve been learning and applying new languages and methodologies since my
