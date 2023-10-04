@@ -61,17 +61,11 @@ export const HireMe = () => {
                   like Bootstrap. I have a record of delighting impossible to please clients.
                 </p>
                 <p>
-                  I come from a troubled family and am the only one who was able to get out of
-                  poverty and into a career. I&apos;d say I&apos;m self taught, I&apos;ve never
-                  formally studied computers, but actually I&apos;ve been taught by the multitudes
-                  of voices, in books and across the internet, and from the people and code
-                  I&apos;ve worked with. I&apos;ve also figured an awful lot out on my own.
-                </p>
-                <p>
                   <b>Socially</b>, I&apos;m compassionate and supportive, but also quick to laugh
                   and joke around. <b>Professionally</b>, I have finally abandoned the impostor
                   syndrome. I&apos;ve proven I can learn anything and apply it in a professional
                   setting, rather quickly. I ask questions, look things up, and ask for help.
+                  I&apos;m also quick to jump in if I feel I can help.
                 </p>
                 <p>
                   I&apos;ve been learning and applying new languages and methodologies since my
