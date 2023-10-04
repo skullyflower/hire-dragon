@@ -54,9 +54,9 @@ export const HireMe = () => {
             {textExpanded && (
               <>
                 <p>
-                  My passion is bringing excellent designs to life with real data. I work well with
-                  in cross functional teams, boldly and tenaciously meeting the challenges of good
-                  UX design or complex data manipulations. I have experience creating fully
+                  My passion is bringing excellent designs to life with real data. I work well
+                  within cross functional teams, boldly and tenaciously meeting the challenges of
+                  good UX design or complex data manipulations. I have experience creating fully
                   responsive sites from scratch in pure css, but also with the aid of UI frameworks,
                   like Bootstrap. I have a record of delighting impossible to please clients.
                 </p>
