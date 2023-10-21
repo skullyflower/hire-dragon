@@ -8,18 +8,31 @@ const linksArray = [
   },
   { name: 'GitHub', href: 'https://www.github.com/skullyflower' },
   { name: 'Resumé', href: '/DragonMessmerwebResume.pdf' },
-  { name: 'Skully Flower', href: 'https://www.skullyflower.com' },
-  { name: 'Doug Mac Art', href: 'https://dougmac.skullyflower.com' },
-  { name: 'Hello Calculator', href: '/calc' },
+  {
+    name: 'Skully Flower',
+    href: 'https://www.skullyflower.com',
+    extra: 'Personal Art Site where I experiment.',
+  },
+  {
+    name: 'Doug Mac Art',
+    href: 'https://dougmac.skullyflower.com',
+    extra: 'Wordress Site with customized Twenty Eleven Theme',
+  },
+  {
+    name: 'Hello Calculator',
+    href: '/calc',
+    extra: 'Hosted example of code exercise in typescript, unfinished.',
+  },
 ];
 
-type SlideLinkType = { name: string; href: string };
-const SlideLink = ({ name, href }: SlideLinkType) => {
+type SlideLinkType = { name: string; href: string; extra: string | null };
+const SlideLink = ({ name, href, extra }: SlideLinkType) => {
   return (
     <div className='slideLink'>
       <a href={href} target={name} rel='noopener'>
         {name}
       </a>
+      {extra && <p>{extra}</p>}
     </div>
   );
 };
@@ -91,7 +104,12 @@ export const HireMe = () => {
           </p>
           <div className='links'>
             {linksArray.map((link) => (
-              <SlideLink key={link.name} name={link.name} href={link.href} />
+              <SlideLink
+                key={link.name}
+                name={link.name}
+                href={link.href}
+                extra={link.extra ?? null}
+              />
             ))}
           </div>
         </div>
