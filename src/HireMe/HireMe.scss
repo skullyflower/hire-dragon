@@ -1,4 +1,7 @@
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+$salmon: salmon;
 html * {
   font-family: 'Work Sans', sans-serif;
 }
@@ -65,7 +68,7 @@ p{
     }
 
 &:nth-child(1){
-  background-color: darken(desaturate(salmon,10%), 9%);
+  background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
   animation-delay: .5s;
 }
 &:nth-child(2){  
@@ -89,7 +92,7 @@ p{
   animation-delay: 1.5s;
 }
 &:nth-child(7){
-  background-color: darken(desaturate(salmon,10%), 9%);
+  background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
   animation-delay: .5s;
 }
 &:nth-child(8){  
