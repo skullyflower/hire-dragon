@@ -56,8 +56,8 @@ export const HireMe = () => {
           <h1>Dragon Messmer</h1>
           <div className={textExpanded ? 'description expanded' : 'description'}>
             <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>
-              Purpose driven, Front-end forcused, Sr. Software Engineer, with 10+ years of remote
-              work experience.
+              Purpose driven, Frontend focused, Sr. Software Engineer, with 10+ years of remote work
+              experience.
             </h3>
             <p>
               I&apos;m passionate about bringing excellent designs to life with real data. I work
@@ -95,10 +95,10 @@ export const HireMe = () => {
                   change back to more visually interesting and client centered challenges.
                 </p>
                 <p>
-                  I, myself, am no designer; I&apos;m more of a weird artist. However, I work well
+                  I myself am no designer - I&apos;m more of a weird artist. However, I work well
                   with excellent designers. I am able to not only replicate a static design, but
                   also turn it into a dynamic, living piece of code, that responds to the screen on
-                  which it is diplayed, and the variations in the data that it will contain.
+                  which it is displayed, and to variations in the data, that it will contain.
                 </p>
               </>
             )}
