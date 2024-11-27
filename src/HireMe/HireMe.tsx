@@ -20,7 +20,7 @@ const linksArray = [
   {
     name: 'RARRecover',
     href: 'https://rarr-recovery.skullyflower.com',
-    extra: 'Fun, but useful 12 step tool site.',
+    extra: 'Fun, useful 12 step site.',
   },
   {
     name: 'Skully Flower',
@@ -53,40 +53,41 @@ export const HireMe = () => {
     <main id='pagebody'>
       <section>
         <div className='content'>
-          <h1>About me, Dragon Messmer.</h1>
+          <h1>Dragon Messmer</h1>
           <div className={textExpanded ? 'description expanded' : 'description'}>
-            <h3 style={{ textAlign: 'center' }}>
+            <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>
               Purpose driven, Front-end forcused, Sr. Software Engineer, with 10+ years of remote
               work experience.
             </h3>
             <p>
-              &ldquo;Dragon is a fantastic front-end developer who is an asset to every team she
-              joins. She brings both deep technical knowledge and a willingness to jump in and help
-              with anything. In fact, that customer focus/product mindset is one of her biggest
-              strengths. She was often requested by name by our professional services customers
-              because of her attention to detail and focus on helping the customer achieve their
-              vision.&rdquo; -{' '}
-              <i>
-                <a
-                  href='https://www.linkedin.com/in/aaron-witt-1455783/'
-                  target='aaron'
-                  rel='noopener'
-                >
-                  Aaron Witt, Enterprise Cloud Architect | Engineering Leader | DevOps Devotee
-                </a>
-              </i>
+              I&apos;m passionate about bringing excellent designs to life with real data. I work
+              well within cross functional teams, boldly and tenaciously meeting the challenges of
+              good UX design, difficult to realize requirements, or complex data manipulations. I
+              have experience creating fully responsive sites from scratch with pure css, but am
+              also comfortable working with UI frameworks, like Chakra or Bootstrap. I have a record
+              of delighting impossible to please clients, and other stakeholders.
             </p>
+
             {textExpanded && (
               <>
                 <p>
-                  I&apos;m passionate about bringing excellent designs to life with real data. I
-                  work well within cross functional teams, boldly and tenaciously meeting the
-                  challenges of good UX design, difficult to realize requirements, or complex data
-                  manipulations. I have experience creating fully responsive sites from scratch with
-                  pure css, but am also comfortable working with UI frameworks, like Chakra or
-                  Bootstrap. I have a record of delighting impossible to please clients, and other
-                  stakeholders.
+                  &ldquo;Dragon is a fantastic front-end developer who is an asset to every team she
+                  joins. She brings both deep technical knowledge and a willingness to jump in and
+                  help with anything. In fact, that customer focus/product mindset is one of her
+                  biggest strengths. She was often requested by name by our professional services
+                  customers because of her attention to detail and focus on helping the customer
+                  achieve their vision.&rdquo; -{' '}
+                  <i>
+                    <a
+                      href='https://www.linkedin.com/in/aaron-witt-1455783/'
+                      target='aaron'
+                      rel='noopener'
+                    >
+                      Aaron Witt, Enterprise Cloud Architect | Engineering Leader | DevOps Devotee
+                    </a>
+                  </i>
                 </p>
+
                 <p>
                   In recent years, my career has brought me into the mortgage industry,
                   creating/expanding/maintaining mortgage portal, SaaS apps. Although the challenges
