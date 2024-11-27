@@ -6,23 +6,32 @@ const linksArray = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/skullyflower',
   },
-  { name: 'GitHub', href: 'https://www.github.com/skullyflower' },
+  {
+    name: 'GitHub',
+    href: 'https://www.github.com/skullyflower',
+    extra: 'Personal account that houses my experiments',
+  },
   { name: 'Resumé', href: '/DragonMessmerwebResume.pdf' },
+  {
+    name: 'EPMX',
+    href: 'https://epmexperience.com',
+    extra: 'Professional Project: Mortage Portal',
+  },
+  {
+    name: 'RARRecover',
+    href: 'https://rarr-recovery.skullyflower.com',
+    extra: 'Fun, but useful 12 step tool site.',
+  },
   {
     name: 'Skully Flower',
     href: 'https://www.skullyflower.com',
     extra: 'Personal Art Site where I experiment.',
   },
-  {
-    name: 'Doug Mac Art',
-    href: 'https://dougmac.skullyflower.com',
-    extra: 'Wordress Site with customized Twenty Eleven Theme',
-  },
-  {
-    name: 'Hello Calculator',
-    href: '/calc',
-    extra: 'Hosted example of code exercise in typescript, unfinished.',
-  },
+  // {
+  //   name: 'Hello Calculator',
+  //   href: '/calc',
+  //   extra: 'Hosted example of code exercise in typescript, unfinished.',
+  // },
 ];
 
 type SlideLinkType = { name: string; href: string; extra: string | null };
@@ -46,7 +55,10 @@ export const HireMe = () => {
         <div className='content'>
           <h1>About me, Dragon Messmer.</h1>
           <div className={textExpanded ? 'description expanded' : 'description'}>
-            <h3 style={{ textAlign: 'center' }}>An adaptable and well rounded software engineer</h3>
+            <h3 style={{ textAlign: 'center' }}>
+              Purpose driven, Front-end forcused, Sr. Software Engineer, with 10+ years of remote
+              work experience.
+            </h3>
             <p>
               &ldquo;Dragon is a fantastic front-end developer who is an asset to every team she
               joins. She brings both deep technical knowledge and a willingness to jump in and help
@@ -60,39 +72,33 @@ export const HireMe = () => {
                   target='aaron'
                   rel='noopener'
                 >
-                  Aaron Witt, engineering leader
+                  Aaron Witt, Enterprise Cloud Architect | Engineering Leader | DevOps Devotee
                 </a>
               </i>
             </p>
             {textExpanded && (
               <>
                 <p>
-                  My passion is bringing excellent designs to life with real data. I work well
-                  within cross functional teams, boldly and tenaciously meeting the challenges of
-                  good UX design or complex data manipulations. I have experience creating fully
-                  responsive sites from scratch in pure css, but also with the aid of UI frameworks,
-                  like Bootstrap. I have a record of delighting impossible to please clients.
+                  I&apos;m passionate about bringing excellent designs to life with real data. I
+                  work well within cross functional teams, boldly and tenaciously meeting the
+                  challenges of good UX design, difficult to realize requirements, or complex data
+                  manipulations. I have experience creating fully responsive sites from scratch with
+                  pure css, but am also comfortable working with UI frameworks, like Chakra or
+                  Bootstrap. I have a record of delighting impossible to please clients, and other
+                  stakeholders.
                 </p>
                 <p>
-                  <b>Socially</b>, I&apos;m compassionate and supportive, but also quick to laugh
-                  and joke around. <b>Professionally</b>, I have finally abandoned the impostor
-                  syndrome. I&apos;ve proven I can learn anything and apply it in a professional
-                  setting, rather quickly. I ask questions, look things up, and ask for help.
-                  I&apos;m also quick to jump in if I feel I can help.
+                  In recent years, my career has brought me into the mortgage industry,
+                  creating/expanding/maintaining mortgage portal, SaaS apps. Although the challenges
+                  these sites pose are juicy, my creative side is dying, and I am looking to make a
+                  change back to more visually interesting and client centered challenges.
                 </p>
                 <p>
-                  I&apos;ve been learning and applying new languages and methodologies since my
-                  first tech gig. I barely knew HTML before I had to start scripting in PHP. The
-                  next job required Javascript which is a very different language from PHP. Since
-                  then I&apos;ve worked in C#, angularJs, JQuery, and other languages and
-                  frameworks, up and down the stack.
+                  I, myself, am no designer; I&apos;m more of a weird artist. However, I work well
+                  with excellent designers. I am able to not only replicate a static design, but
+                  also turn it into a dynamic, living piece of code, that responds to the screen on
+                  which it is diplayed, and the variations in the data that it will contain.
                 </p>
-                <p>
-                  Then at Homepoint I had the opportunity to start building with React and have come
-                  to love the way React lends itself to clean, organized reusable code. (Not that
-                  you cannot make a mess of it.){' '}
-                </p>
-                <p>I wonder where my next position will bring me? Ruby on Rails perhaps?</p>
               </>
             )}
           </div>
