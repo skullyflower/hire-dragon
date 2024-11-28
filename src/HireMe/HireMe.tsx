@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HireMe.scss';
 
-const linksArray = [
+export const linksArray = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/skullyflower',

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-function concatenateNumKeyPress(activeNumber: string, digit: string) {
+export function concatenateNumKeyPress(activeNumber: string | null, digit: string) {
   if (activeNumber === null) {
     if (digit === '.') return '0.';
     return digit;
@@ -9,13 +9,13 @@ function concatenateNumKeyPress(activeNumber: string, digit: string) {
   }
 }
 
-function fixProcision(num: number) {
+export function fixProcision(num: number) {
   const stringNum = num.toPrecision(13);
   if (stringNum.includes('.')) return Number(stringNum.replace(/[0]*$/, ''));
   return Number(stringNum);
 }
 
-function doOperation(number: number, runningtotal: number, operation: string | null) {
+export function doOperation(number: number, runningtotal: number, operation: string | null) {
   switch (operation) {
     case '÷':
       if (number) {
@@ -34,7 +34,7 @@ function doOperation(number: number, runningtotal: number, operation: string | n
       return 0;
   }
 }
-const formatTotal = (number: string, total: number) => {
+export const formatTotal = (number: string, total: number) => {
   const rawNumber = number !== '' && Number(number) !== total ? number : total;
   const stringNumber = rawNumber.toString();
 
