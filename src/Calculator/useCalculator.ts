@@ -15,7 +15,7 @@ export function fixProcision(num: number) {
   return Number(stringNum);
 }
 
-export function doOperation(number: number, runningtotal: number, operation: string | null) {
+export function doOperation(runningtotal: number, operation: string | null, number: number) {
   switch (operation) {
     case '÷':
       if (number) {
@@ -110,7 +110,7 @@ export const useCalculator = () => {
   const processCalculation = () => {
     if (activeFunction !== null && total !== 0) {
       if (activeNumber === '0' && activeFunction === '÷') setHasError(true);
-      setTotal(doOperation(Number(activeNumber), total, activeFunction));
+      setTotal(doOperation(total, activeFunction, Number(activeNumber)));
     }
     setActiveNumber('');
     setActiveFunction(null);
