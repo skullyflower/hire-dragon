@@ -28,8 +28,9 @@ export const linksArray = [
     name: 'RARRecover',
     href: 'https://rarr-recovery.skullyflower.com',
     extra: [
-      'Fun, useful 12 step site.',
-      'App in development ( React, Typescript, Chakra) for folks in 12 step, to do spot check, daily inventories. The monster comics theme came from a comic I self published.',
+      'Fun, useful 12 step recovery site.',
+      '(React, Typescript, Chakra) Site, still in development, for Ragers and Rampagers Recovering, a ficticious 12 step program, with real 10th step, spot check, inventory forms. Results can be copied and sent to an accountability buddy.',
+      'The monster recovery theme came from a comic I self published.',
     ],
   },
   {
@@ -37,9 +38,10 @@ export const linksArray = [
     href: 'https://www.skullyflower.com',
     extra: [
       'My personal art site.',
-      'This has been my personal art site for almost 20 years. I have a lot of fun with it. I coded my own databaseless cart and gallery system, a separate admin app, using node, to maintain the JSON files the site uses for data.',
+      'For almost 20 years, this has housed my personal brand. I have a lot of fun with it.',
+      'I coded my own database-less cart and gallery system, and a separate admin app, using node, to maintain the JSON files the site uses for data.',
       'And it is haunted every Fall with various ghosts!',
-      'Every time I learn an new language, trick or framework, I rebuilt the site to use it. Currently, I am slowly reworking it to use TypeScript and sustand and to clean up the styles and layout.',
+      'Every time I learn a new language, trick or framework, I rebuilt the site to use it. Currently, I am slowly reworking it to use TypeScript and zustand. Because it’s so old there is a lot to clean up.',
     ],
   },
   // {
