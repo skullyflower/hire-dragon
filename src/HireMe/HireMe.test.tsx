@@ -35,7 +35,7 @@ describe('HireMe tests', () => {
     const { getByText } = render(<HireMe />);
     linksArray.forEach((link) => {
       if (link.extra) {
-        expect(getByText(link.extra)).toBeDefined();
+        expect(getByText(link.extra[0])).toBeDefined();
       }
     });
   });

@@ -22,11 +22,14 @@ html * {
   overflow: hidden;
   padding-bottom:50px;
 }
+.wraptop{
+  padding-inline: 20px;
+}
 .description{
   text-align: left;
   transition: all .3s ease-in-out;
   overflow: hidden;
-  height:310px;
+  height:110px;
   min-height: fit-content;
   &.expanded{
     overflow-y: auto;
@@ -41,7 +44,6 @@ html * {
     margin:10px;
   }
   h3{
-    margin-inline: 40px;
     text-align: center;
     padding-block:25px;
     border-bottom: 1px solid;
@@ -54,9 +56,9 @@ h1 {
   font-weight: bolder;
 }
 p{
-  font-size:1.5em;
+  font-size:1.1em;
   margin-bottom: 1.6em;  
-  padding:0 40px;
+  padding:0 10px;
 }
 .links{
   position: relative;
@@ -64,13 +66,14 @@ p{
   flex-direction: column;
 
   .slideLink{
+    > div{padding: 30px 10px;}
+
     a {
       color:#a1df51;
       transition: all .3s ease-out ;
       display:inline-block;
       font-size: 2em;  
       font-weight: bold;
-      padding: 1em 10px;
     }
 
 &:nth-child(1){
@@ -125,6 +128,10 @@ p{
 }
 
 @media screen and (min-width: 700px){
+  .wraptop{
+    padding-inline: 40px;
+  }
+  
   .links{
     overflow: hidden;
     .slideLink{
@@ -142,7 +149,8 @@ p{
       }
       &:hover p {
         margin:10px;
-        height:200px;
+        height:800px;
+        max-height: fit-content;
       }  
       &:nth-child(odd){
         transform: skewX(10deg);
