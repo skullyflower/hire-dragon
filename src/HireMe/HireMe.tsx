@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './HireMe.scss';
 
 export const linksArray = [
@@ -25,7 +25,7 @@ export const linksArray = [
     ],
   },
   {
-    name: 'RARRecover',
+    name: 'RARR Recover',
     href: 'https://rarr-recovery.skullyflower.com',
     extra: [
       'Fun, useful 12 step recovery site.',
@@ -34,7 +34,7 @@ export const linksArray = [
     ],
   },
   {
-    name: 'Skully Flower',
+    name: 'SkullyFlower',
     href: 'https://www.skullyflower.com',
     extra: [
       'My personal art site.',
@@ -59,9 +59,7 @@ const SlideLink = ({ name, href, extra }: SlideLinkType) => {
         <a href={href} target={name} rel='noopener'>
           {name}
         </a>
-        {extra?.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        {extra?.map((p, i) => <p key={i}>{p}</p>)}
       </div>
     </div>
   );

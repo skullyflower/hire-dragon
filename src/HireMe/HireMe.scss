@@ -66,6 +66,8 @@ p{
   flex-direction: column;
 
   .slideLink{
+    transition: all .3s ease-in-out ;
+
     > div{padding: 30px 10px;}
 
     a {
@@ -140,18 +142,6 @@ p{
         font-size: 2.5em;
         text-shadow: 0 0 4px #000;
       }
-      p{
-        overflow: hidden;
-        transition: all .3s ease-out ;
-        margin:0;
-        height:0;
-        max-height: max-content;
-      }
-      &:hover p {
-        margin:10px;
-        height:800px;
-        max-height: fit-content;
-      }  
       &:nth-child(odd){
         transform: skewX(10deg);
         translate:99%;
@@ -160,6 +150,9 @@ p{
         width: 40%;
         padding:0 40px;
         animation: slideInRight 1s ease-in-out .5s 1 normal forwards;
+        div{
+          align-items: flex-start;
+        }
       }
       &:nth-child(even){
         transform: skewX(-10deg);
@@ -170,8 +163,32 @@ p{
         margin:10px 0;
         animation: slideInLeft 1s ease-in-out .7s 1 normal forwards;
         opacity: .9;
+        div{
+          align-items: flex-end;
+        }
       }
-  
+      div {
+        display: flex;
+        flex-direction: column;
+        transition: all 1s ease-in-out 200ms;
+        margin: 0;
+        height: 100%;
+        max-height: fit-content;
+      }
+      p{
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        margin:0;
+        height:0;
+        max-height: max-content;
+        width:75%
+      }
+      &:hover p {
+        margin:10px;
+        height:800px;
+        max-height: fit-content;
+      }  
+
     }
   }
 }

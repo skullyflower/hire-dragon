@@ -1,41 +1,41 @@
 import { describe, expect, it } from 'vitest';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import { HireMe, linksArray } from './HireMe';
 
 describe('HireMe tests', () => {
   it(' should display the h1 title.', () => {
     const { getByText } = render(<HireMe />);
-    expect(getByText('About me, Dragon Messmer.')).toBeDefined();
+    expect(getByText('Dragon Messmer')).toBeInTheDocument();
   });
 
-  it('should display the h1 title', () => {
-    const { getByText } = render(<HireMe />);
-    expect(getByText('Dragon Messmer')).toBeDefined();
-  });
-
-  it('should toggle text expansion on click', () => {
-    const { getByText, queryByText } = render(<HireMe />);
-    const toggleButton = getByText('... Show more');
+  it('should toggle text expansion on click', async () => {
+    render(<HireMe />);
+    const toggleButton = screen.getByText('... Show more');
+    expect(toggleButton).toBeInTheDocument();
     toggleButton.click();
-    expect(getByText('Show less')).toBeDefined();
-    expect(getByText(/Dragon is a fantastic front-end developer/)).toBeDefined();
+    expect(await screen.findByText('Show less')).toBeInTheDocument();
+    expect(
+      await screen.findByText(/Dragon is a fantastic front-end developer/),
+    ).toBeInTheDocument();
     toggleButton.click();
-    expect(getByText('... Show more')).toBeDefined();
-    expect(queryByText(/Dragon is a fantastic front-end developer/)).toBeNull();
+    expect(await screen.findByText('... Show more')).toBeInTheDocument();
+    expect(await screen.queryByText(/Dragon is a fantastic front-end developer/)).toBeNull();
   });
 
   it('should render all links', () => {
-    const { getByText } = render(<HireMe />);
+    render(<HireMe />);
     linksArray.forEach((link) => {
-      expect(getByText(link.name)).toBeDefined();
+      expect(screen.getByText(link.name)).toBeInTheDocument();
     });
   });
 
   it('should render extra text for links with extra property', () => {
-    const { getByText } = render(<HireMe />);
+    const { queryByText } = render(<HireMe />);
     linksArray.forEach((link) => {
       if (link.extra) {
-        expect(getByText(link.extra[0])).toBeDefined();
+        expect(queryByText(link.extra[0])).toBeInTheDocument();
       }
     });
   });
