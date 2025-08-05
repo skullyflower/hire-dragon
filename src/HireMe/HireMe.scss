@@ -1,17 +1,26 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
-
+:root{
+    interpolate-size: allow-keywords;
+}
 $salmon: salmon;
 html * {
   font-family: 'Work Sans', sans-serif;
 }
+
 #content{
   position:relative;
   font-size:14px;
 }
-#main {border:none;border-radius: 0;}
+main {
+  border:none;
+  border-radius: 0;
+  max-width: 1000px;
+  margin:0 auto;
+}
 .content {
-  background-color: #222;
+  background:url('/arrow-up-down-circle.svg') -150px -150px #111;
+  background-size: 20em;
   border: 2px solid #567;
   border-radius: 10px;
   margin-bottom: 5px;
@@ -27,18 +36,29 @@ html * {
 }
 .description{
   text-align: left;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
   overflow: hidden;
   height:110px;
   min-height: fit-content;
   &.expanded{
     overflow-y: auto;
-    height:1075px;
     max-height: fit-content;
-   }
+    height:1075px;
+    &>div{
+      height:auto !important;
+      overflow: hidden;
+    }
+  }
+  div{
+    transition: height ease-in 0.5s,
+      content-visibility 0.5s ease-out allow-discrete;
+    height: 0;
+    overflow: clip;
+  }
   &>div{
+    transition: all .5s ease-in-out  allow-discrete;
     height: 0px;
-    overflow: hidden;
+    overflow: clip;
   }
   &+p{
     margin:10px;
@@ -66,13 +86,13 @@ p{
   flex-direction: column;
 
   .slideLink{
-    transition: all .3s ease-in-out ;
+    transition: all .3s ease-in-out .2s;
 
     > div{padding: 30px 10px;}
 
     a {
       color:#a1df51;
-      transition: all .3s ease-out ;
+      transition: all .3s ease-out  .2s;
       display:inline-block;
       font-size: 2em;  
       font-weight: bold;
@@ -177,7 +197,7 @@ p{
       }
       p{
         overflow: hidden;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out .2ms;
         margin:0;
         height:0;
         max-height: max-content;

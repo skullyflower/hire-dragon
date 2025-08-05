@@ -26,11 +26,12 @@ export const linksArray = [
   },
   {
     name: 'RARR Recover',
-    href: 'https://rarr-recovery.skullyflower.com',
+    href: 'https://rarr-recovery.org',
     extra: [
       'Fun, useful 12 step recovery site.',
       '(React, Typescript, Chakra) Site, still in development, for Ragers and Rampagers Recovering, a ficticious 12 step program, with real 10th step, spot check, inventory forms. Results can be copied and sent to an accountability buddy.',
       'The monster recovery theme came from a comic I self published.',
+      'Desktop app (Electron) is coming soon!',
     ],
   },
   {
@@ -88,55 +89,52 @@ export const HireMe = () => {
                 record of delighting impossible to please clients, and other stakeholders.
               </p>
 
-              {textExpanded && (
-                <>
-                  <blockquote>
-                    <p>
-                      &ldquo;Dragon is a fantastic front-end developer who is an asset to every team
-                      she joins. She brings both deep technical knowledge and a willingness to jump
-                      in and help with anything. In fact, that customer focus/product mindset is one
-                      of her biggest strengths. She was often requested by name by our professional
-                      services customers because of her attention to detail and focus on helping the
-                      customer achieve their vision.&rdquo; -{' '}
-                      <i>
-                        <a
-                          href='https://www.linkedin.com/in/aaron-witt-1455783/'
-                          target='aaron'
-                          rel='noopener'
-                        >
-                          Aaron Witt, Enterprise Cloud Architect | Engineering Leader | DevOps
-                          Devotee
-                        </a>
-                      </i>
-                    </p>
-                  </blockquote>
+              <div>
+                <blockquote>
                   <p>
-                    I am full-stack capable and adept at quickly learning new languages and
-                    frameworks, and have never held a purely front-end position. My experience spans
-                    from PHP to C# to Node.js, and from HTML and jQuery to modern libraries like
-                    React. I have worked with various databases, version control systems, and
-                    hosting environments, collaborating effectively within diverse teams. I am
-                    well-versed in agile methodologies and have comprehensive experience with the
-                    entire software development life cycle—ranging from requirements gathering and
-                    architecture design to deployment and ongoing maintenance.
+                    &ldquo;Dragon is a fantastic front-end developer who is an asset to every team
+                    she joins. She brings both deep technical knowledge and a willingness to jump in
+                    and help with anything. In fact, that customer focus/product mindset is one of
+                    her biggest strengths. She was often requested by name by our professional
+                    services customers because of her attention to detail and focus on helping the
+                    customer achieve their vision.&rdquo; -{' '}
+                    <i>
+                      <a
+                        href='https://www.linkedin.com/in/aaron-witt-1455783/'
+                        target='aaron'
+                        rel='noopener'
+                      >
+                        Aaron Witt, Enterprise Cloud Architect | Engineering Leader | DevOps Devotee
+                      </a>
+                    </i>
                   </p>
-                  <p>
-                    While I wouldn&apos;t call myself a designer ( I consider myself more of a
-                    quirky artist ) I do work well with designers, not simply replicating static
-                    designs but transforming them into dynamic, responsive pieces of code that adapt
-                    seamlessly to different screens and varying data. I have experience with tools
-                    like Figma and Zeplin and am highly comfortable with the process of bringing a
-                    design from concept to fully functional code.
-                  </p>
-                  <p>
-                    In recent years, my career has led me into the mortgage industry, where I have
-                    been involved in creating, expanding, and maintaining mortgage portal, SaaS
-                    applications. While the challenges presented by these projects are
-                    intellectually engaging, I find myself missing the more visually dynamic and
-                    client-centered challenges that characterized my earlier career.
-                  </p>
-                </>
-              )}
+                </blockquote>
+                <p>
+                  I am full-stack capable and adept at quickly learning new languages and
+                  frameworks, and have never held a purely front-end position. My experience spans
+                  from PHP to C# to Node.js, and from HTML and jQuery to modern libraries like
+                  React. I have worked with various databases, version control systems, and hosting
+                  environments, collaborating effectively within diverse teams. I am well-versed in
+                  agile methodologies and have comprehensive experience with the entire software
+                  development life cycle—ranging from requirements gathering and architecture design
+                  to deployment and ongoing maintenance.
+                </p>
+                <p>
+                  While I wouldn&apos;t call myself a designer ( I consider myself more of a quirky
+                  artist ) I do work well with designers, not simply replicating static designs but
+                  transforming them into dynamic, responsive pieces of code that adapt seamlessly to
+                  different screens and varying data. I have experience with tools like Figma and
+                  Zeplin and am highly comfortable with the process of bringing a design from
+                  concept to fully functional code.
+                </p>
+                <p>
+                  In recent years, my career has led me into the mortgage industry, where I have
+                  been involved in creating, expanding, and maintaining mortgage portal, SaaS
+                  applications. While the challenges presented by these projects are intellectually
+                  engaging, I find myself missing the more visually dynamic and client-centered
+                  challenges that characterized my earlier career.
+                </p>
+              </div>
             </div>
             <p
               style={{ fontSize: '1em', textAlign: 'right', cursor: 'pointer' }}
