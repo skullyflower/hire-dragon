@@ -32,8 +32,8 @@ export const HireMe = () => {
               <p>{hiremeText.visable}</p>
 
               <div>
-                {hiremeText.hidden.map((paragraph) => (
-                  <p dangerouslySetInnerHTML={{ __html: paragraph }} />
+                {hiremeText.hidden.map((paragraph, i) => (
+                  <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
                 ))}
               </div>
             </div>
@@ -46,7 +46,7 @@ export const HireMe = () => {
           </div>
 
           <div className='links'>
-            {linksArray.map((link) => (
+            {linksArray.map((link: SlideLinkType) => (
               <SlideLink
                 key={link.name}
                 name={link.name}
