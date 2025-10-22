@@ -13,13 +13,15 @@ describe('HireMe tests', () => {
 
   it('should toggle text expansion on click', async () => {
     render(<HireMe />);
-    const showMore = screen.getByText('... Show more');
-    expect(showMore).toBeInTheDocument();
-    showMore.click();
-    expect(await screen.findByText('Show less')).toBeInTheDocument();
     expect(
       await screen.findByText(/Dragon is a fantastic front-end developer/),
     ).toBeInTheDocument();
+    const showMore = screen.getByText('... Show more');
+    expect(showMore).toBeInTheDocument();
+    expect(await screen.findByTestId('description')).not.toHaveClass('expanded');
+    showMore.click();
+    expect(await screen.findByText('Show less')).toBeInTheDocument();
+    expect(await screen.findByTestId('description')).toHaveClass('expanded');
   });
 
   it('should render all links', () => {

@@ -27,7 +27,10 @@ export const HireMe = () => {
         <div className='content'>
           <h1>Dragon Messmer</h1>
           <div className='wraptop'>
-            <div className={textExpanded ? 'description expanded' : 'description'}>
+            <div
+              data-testid='description'
+              className={textExpanded ? 'description expanded' : 'description'}
+            >
               <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeText.intro}</h3>
               <p>{hiremeText.visable}</p>
 
