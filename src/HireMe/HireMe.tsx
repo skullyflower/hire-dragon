@@ -32,9 +32,8 @@ export const HireMe = () => {
               className={textExpanded ? 'description expanded' : 'description'}
             >
               <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeText.intro}</h3>
-              <p>{hiremeText.visable}</p>
-
               <div>
+                <p>{hiremeText.visable}</p>
                 {hiremeText.hidden.map((paragraph, i) => (
                   <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
                 ))}
