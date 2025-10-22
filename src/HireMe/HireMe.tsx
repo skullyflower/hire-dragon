@@ -6,7 +6,7 @@ type SlideLinkType = { name: string; href: string; extra: string[] | null };
 const SlideLink = ({ name, href, extra }: SlideLinkType) => {
   return (
     <div className='slideLink'>
-      <div>
+      <div onClick={() => window.open(href, name)}>
         <a href={href} target={name} rel='noopener'>
           {name}
         </a>

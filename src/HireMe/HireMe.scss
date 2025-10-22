@@ -15,8 +15,7 @@ html * {
 main {
   border:none;
   border-radius: 0;
-  max-width: 1000px;
-  margin:0 auto;
+  margin:0 50px;
 }
 .content {
   background:url('/arrow-up-down-circle.svg') -150px -150px #111;
@@ -88,7 +87,7 @@ p{
   .slideLink{
     transition: all .3s ease-in-out .2s;
 
-    > div{padding: 30px 10px;}
+    > div{padding: 30px 10px;cursor: pointer;}
 
     a {
       color:#a1df51;
