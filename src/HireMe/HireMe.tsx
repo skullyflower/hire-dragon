@@ -20,7 +20,7 @@ const SlideLink = ({ name, href, extra }: SlideLinkType) => {
 
 export const HireMe = () => {
   const [textExpanded, setTextExpaned] = useState(false);
-  const { linksArray, hiremeText } = textValues;
+  const { linksArray, hiremeintro, hiremeText } = textValues;
   return (
     <main id='pagebody'>
       <section>
@@ -31,10 +31,9 @@ export const HireMe = () => {
               data-testid='description'
               className={textExpanded ? 'description expanded' : 'description'}
             >
-              <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeText.intro}</h3>
+              <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeintro}</h3>
               <div>
-                <p>{hiremeText.visable}</p>
-                {hiremeText.hidden.map((paragraph, i) => (
+                {hiremeText.map((paragraph, i) => (
                   <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
                 ))}
               </div>

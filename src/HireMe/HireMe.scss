@@ -44,7 +44,8 @@ main {
     max-height: fit-content;
     height:1075px;
     &>div{
-      height:auto !important;
+      height:1075px;
+      max-height: fit-content;
       overflow: hidden;
     }
   }
