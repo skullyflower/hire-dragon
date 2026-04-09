@@ -6,14 +6,19 @@ type SlideLinkType = { name: string; href: string; extra: string[] | null };
 const SlideLink = ({ name, href, extra }: SlideLinkType) => {
   return (
     <div className='slideLink'>
-      <div onClick={() => window.open(href, name)}>
-        <a href={href} target={name} rel='noopener'>
-          {name}
-        </a>
-        {extra?.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
-      </div>
+      <button popoverTarget={name}>{name}</button>
+      {extra && (
+        <div popover='auto' id={name} onClick={() => window.open(href, name)}>
+          <a href={href} target={name} rel='noopener'>
+            <h2>{name}</h2>
+            <hr />
+            {extra?.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+            <p className='right'>Go to {name} &rarr;</p>
+          </a>
+        </div>
+      )}
     </div>
   );
 };
@@ -38,11 +43,10 @@ export const HireMe = () => {
                 ))}
               </div>
             </div>
-            <p
-              style={{ fontSize: '1em', textAlign: 'right', cursor: 'pointer' }}
-              onClick={() => setTextExpaned(!textExpanded)}
-            >
-              {textExpanded ? 'Show less' : '... Show more'}
+            <p style={{ fontSize: '1em', textAlign: 'right' }}>
+              <span style={{ cursor: 'pointer' }} onClick={() => setTextExpaned(!textExpanded)}>
+                {textExpanded ? 'Show less' : '... Show more'}
+              </span>
             </p>
           </div>
 

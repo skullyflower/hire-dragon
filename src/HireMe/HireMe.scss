@@ -7,7 +7,10 @@ $salmon: salmon;
 html * {
   font-family: 'Work Sans', sans-serif;
 }
-
+hr {border-style:solid;color:white; border-top: none;}
+.right{
+  text-align: right;
+}
 #content{
   position:relative;
   font-size:14px;
@@ -81,7 +84,6 @@ h1 {
 }
 p{
   font-size:1.1em;
-  margin-bottom: 1.6em;  
   padding:0 10px;
 }
 .links{
@@ -92,65 +94,78 @@ p{
   .slideLink{
     transition: all .3s ease-in-out .2s;
 
-    > div{padding: 30px 10px;cursor: pointer;}
-
-    a {
+    > button{padding: 30px 10px;cursor: pointer;
+      display: block;
+      width: 100%;
+      border:none;
+      background: none;
       color:#a1df51;
       transition: all .3s ease-out  .2s;
-      display:inline-block;
       font-size: 2em;  
       font-weight: bold;
     }
 
-&:nth-child(1){
-  background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
-  animation-delay: .5s;
-}
-&:nth-child(2){  
-  background-color: cadetblue;
-  animation-delay: .7s;
-}
-&:nth-child(3){
-  background-color:darkcyan;
-  animation-delay: .9s;
-}
-&:nth-child(4){
-  background-color:chocolate;
-  animation-delay: 1.1s;
-}
-&:nth-child(5){
-  background-color: cornflowerblue;
-  animation-delay: 1.3s;
-}
-&:nth-child(6){
-  background-color:#567;
-  animation-delay: 1.5s;
-}
-&:nth-child(7){
-  background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
-  animation-delay: .5s;
-}
-&:nth-child(8){  
-  background-color: cadetblue;
-  animation-delay: .7s;
-}
-&:nth-child(9){
-  background-color:darkcyan;
-  animation-delay: .9s;
-}
-&:nth-child(10){
-  background-color:chocolate;
-  animation-delay: 1.1s;
-}
-&:nth-child(11){
-  background-color: cornflowerblue;
-  animation-delay: 1.3s;
-}
-&:nth-child(12){
-  background-color:#567;
-  animation-delay: 1.5s;
-}
-}
+      &:nth-child(1) {
+      background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
+      animation-delay: .5s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(2){  
+      background-color: cadetblue;
+      animation-delay: .7s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(3){
+      background-color:darkcyan;
+      animation-delay: .9s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(4){
+      background-color:chocolate;
+      animation-delay: 1.1s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(5){
+      background-color: cornflowerblue;
+      animation-delay: 1.3s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(6){
+      background-color:#567;
+      animation-delay: 1.5s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(7){
+      background-color: color.adjust(salmon, $saturation: 90%, $lightness: -9%);
+      animation-delay: .5s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(8){  
+      background-color: cadetblue;
+      animation-delay: .7s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(9){
+      background-color:darkcyan;
+      animation-delay: .9s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(10){
+      background-color:chocolate;
+      animation-delay: 1.1s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(11){
+      background-color: cornflowerblue;
+      animation-delay: 1.3s;
+      div{background-color: inherit;}
+    }
+    &:nth-child(12){
+      background-color:#567;
+      animation-delay: 1.5s;
+      div{background-color: inherit;}
+    }
+  }
 }
 
 @media screen and (min-width: 700px){
@@ -161,7 +176,7 @@ p{
   .links{
     overflow: hidden;
     .slideLink{
-      &:hover a{
+      &:hover button{
         color:yellow;
         font-size: 2.5em;
         text-shadow: 0 0 4px #000;
@@ -174,9 +189,7 @@ p{
         width: 40%;
         padding:0 40px;
         animation: slideInRight 1s ease-in-out .5s 1 normal forwards;
-        div{
-          align-items: flex-start;
-        }
+        button{text-align: left;}
       }
       &:nth-child(even){
         transform: skewX(-10deg);
@@ -187,32 +200,35 @@ p{
         margin:10px 0;
         animation: slideInLeft 1s ease-in-out .7s 1 normal forwards;
         opacity: .9;
-        div{
-          align-items: flex-end;
+        button{text-align: right;}
+      }
+      div[popover] {
+        margin-inline: 20%;
+        text-align: left;
+        border-radius: 10px;
+        border:2px solid #000;
+        box-shadow: 5px 5px 10px #333;
+        transition: 0.7s opacity, 0.7s;
+        a{color: white;}
+        h2{  padding:0 10px;}
+       }
+       div[popover]::backdrop {
+          background-color: #44444455;
+          backdrop-filter: blur(3px);
+          transition: 0.7s opacity, 0.7s display allow-discrete,
+            0.7s overlay allow-discrete;
+          opacity: 0;
         }
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        transition: all 1s ease-in-out 200ms;
-        margin: 0;
-        height: 100%;
-        max-height: fit-content;
-      }
-      p{
-        overflow: hidden;
-        transition: all .3s ease-in-out .2ms;
-        margin:0;
-        height:0;
-        max-height: max-content;
-        width:75%
-      }
-      &:hover p {
-        margin:10px;
-        height:800px;
-        max-height: fit-content;
-      }  
-
+        div[popover]:popover-open,
+        div[popover]:popover-open::backdrop {
+          opacity: 1;
+        }
+        @starting-style {
+          div[popover]:popover-open,
+          div[popover]:popover-open::backdrop {
+            opacity: 0;
+          }
+        }
     }
   }
 }
@@ -223,4 +239,9 @@ p{
 @keyframes slideInLeft {
   from {translate:-99%;}
   to {translate:-10%;}
+}
+@starting-style {
+  div[popover]:popover-open {
+    opacity: 0;
+  }
 }
