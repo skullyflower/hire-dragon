@@ -27,41 +27,43 @@ export const HireMe = () => {
   const [textExpanded, setTextExpaned] = useState(false);
   const { linksArray, hiremeintro, hiremeText } = textValues;
   return (
-    <main id='pagebody'>
-      <section>
-        <div className='content'>
-          <h1>Dragon Messmer</h1>
-          <div className='wraptop'>
-            <div
-              data-testid='description'
-              className={textExpanded ? 'description expanded' : 'description'}
-            >
-              <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeintro}</h3>
-              <div>
-                {hiremeText.map((paragraph, i) => (
-                  <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
-                ))}
+    <div className='wrapper'>
+      <main id='pagebody'>
+        <section>
+          <div className='content'>
+            <h1>Dragon Messmer</h1>
+            <div className='wraptop'>
+              <div
+                data-testid='description'
+                className={textExpanded ? 'description expanded' : 'description'}
+              >
+                <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>{hiremeintro}</h3>
+                <div>
+                  {hiremeText.map((paragraph, i) => (
+                    <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                  ))}
+                </div>
               </div>
+              <p style={{ fontSize: '1em', textAlign: 'right' }}>
+                <span style={{ cursor: 'pointer' }} onClick={() => setTextExpaned(!textExpanded)}>
+                  {textExpanded ? 'Show less' : '... Show more'}
+                </span>
+              </p>
             </div>
-            <p style={{ fontSize: '1em', textAlign: 'right' }}>
-              <span style={{ cursor: 'pointer' }} onClick={() => setTextExpaned(!textExpanded)}>
-                {textExpanded ? 'Show less' : '... Show more'}
-              </span>
-            </p>
-          </div>
 
-          <div className='links'>
-            {linksArray.map((link: SlideLinkType) => (
-              <SlideLink
-                key={link.name}
-                name={link.name}
-                href={link.href}
-                extra={link.extra ?? null}
-              />
-            ))}
+            <div className='links'>
+              {linksArray.map((link: SlideLinkType) => (
+                <SlideLink
+                  key={link.name}
+                  name={link.name}
+                  href={link.href}
+                  extra={link.extra ?? null}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   );
 };

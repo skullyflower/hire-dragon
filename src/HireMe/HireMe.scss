@@ -6,6 +6,11 @@
 $salmon: salmon;
 html * {
   font-family: 'Work Sans', sans-serif;
+  color-scheme: light dark;
+}
+.wrapper {
+  max-width: 1139px;
+  margin: 0 auto;
 }
 hr {border-style:solid;color:white; border-top: none;}
 .right{
@@ -18,7 +23,6 @@ hr {border-style:solid;color:white; border-top: none;}
 main {
   border:none;
   border-radius: 0;
-  margin:0 50px;
 }
 .content {
   background:url('/arrow-up-down-circle.svg') -150px -150px #111;
