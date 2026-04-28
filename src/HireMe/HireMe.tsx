@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './HireMe.scss';
+import './HireMe.css';
 import textValues from './hireMe.json';
 
 type SlideLinkType = { name: string; href: string; extra: string[] | null };
