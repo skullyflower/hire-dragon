@@ -27,15 +27,18 @@ describe('HireMe tests', () => {
   it('should render all links', () => {
     render(<HireMe />);
     linksArray.forEach((link) => {
-      expect(screen.getByText(link.name)).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: link.name })).toBeInTheDocument();
     });
   });
 
   it('should render extra text for links with extra property', () => {
-    const { queryByText } = render(<HireMe />);
+    const { container } = render(<HireMe />);
     linksArray.forEach((link) => {
       if (link.extra && link.extra[0].length) {
-        expect(queryByText(link.extra[0])).toBeInTheDocument();
+        const btn = screen.getByRole('button', { name: link.name });
+        expect(btn).toHaveAttribute('popovertarget', link.name);
+        const popover = container.querySelector(`[id="${link.name}"][popover]`);
+        expect(popover).toBeInTheDocument();
       }
     });
   });

@@ -36,7 +36,7 @@ export const Resume = () => {
     <div className='wrapper'>
       <main id='pagebody'>
         <section>
-          <div className='content'>
+          <div className='content' style={{ padding: '1em' }}>
             <h1>{strings.heading}</h1>
             <div
               style={{
@@ -50,9 +50,8 @@ export const Resume = () => {
               <strong>Contact:</strong>
               {strings.contact.map((contact) => transformContent(contact))}
             </div>
-
-            <div className='wraptop'>
-              <div className='description'>
+            <div>
+              <div>
                 <h3 style={{ textAlign: 'center', borderBottom: '1px solid' }}>
                   {strings.subHeading}
                 </h3>
@@ -108,6 +107,8 @@ export const Resume = () => {
                   );
                 })}
               </div>
+              <h3 style={{ textAlign: 'left' }}>Additional Experience</h3>
+              <div style={{ textAlign: 'left' }}></div>
             </div>
           </div>
         </section>
