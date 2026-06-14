@@ -150,33 +150,33 @@ p {
 .links .slideLink:nth-child(11) div { background-color: inherit; }
 .links .slideLink:nth-child(12) { background-color: #567;                animation-delay: 1.5s; }
 .links .slideLink:nth-child(12) div { background-color: inherit; }
-  .links .slideLink div[popover] {
-    margin-inline: 20%;
-    text-align: left;
-    border-radius: 10px;
-    border: 2px solid #000;
-    box-shadow: 5px 5px 10px #333;
-    transition: 0.7s opacity, 0.7s;
-    max-height: 85vh;
-    overflow: auto;
-  }
-  .links .slideLink div[popover] a {
-    color: white;
-  }
-  .links .slideLink div[popover] h2 {
-    padding: 0 10px;
-  }
-  .links .slideLink div[popover]::backdrop {
-    background-color: #44444455;
-    backdrop-filter: blur(3px);
-    transition: 0.7s opacity, 0.7s display allow-discrete,
-      0.7s overlay allow-discrete;
-    opacity: 0;
-  }
-  .links .slideLink div[popover]:popover-open,
-  .links .slideLink div[popover]:popover-open::backdrop {
-    opacity: 1;
-  }
+.links .slideLink div[popover] {
+  margin-inline: 20%;
+  text-align: left;
+  border-radius: 10px;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 10px #333;
+  transition: 0.7s opacity, 0.7s;
+  max-height: 85vh;
+  overflow: auto;
+}
+.links .slideLink div[popover] a {
+  color: white;
+}
+.links .slideLink div[popover] h2 {
+  padding: 0 10px;
+}
+.links .slideLink div[popover]::backdrop {
+  background-color: #44444455;
+  backdrop-filter: blur(3px);
+  transition: 0.7s opacity, 0.7s display allow-discrete,
+    0.7s overlay allow-discrete;
+  opacity: 0;
+}
+.links .slideLink div[popover]:popover-open,
+.links .slideLink div[popover]:popover-open::backdrop {
+  opacity: 1;
+}
 
 @media screen and (min-width: 700px) {
   .wraptop {
@@ -193,49 +193,57 @@ p {
   }
   .links .slideLink:nth-child(odd) {
     transform: skewX(10deg);
-    translate: 99%;
+    transform:translate(99%);
     align-self: flex-end;
     text-align: left;
     width: 40%;
     padding: 0 40px;
-    animation: slideInRight 1s ease-in-out .5s 1 normal forwards;
+    animation-name: slideInRight ;
+    animation-duration:1s ;
+    animation-timing-function: ease-in-out; 
+    animation-delay: .5s;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
   }
   .links .slideLink:nth-child(odd) button {
     text-align: left;
   }
   .links .slideLink:nth-child(even) {
-    transform: skewX(-10deg);
-    translate: -99%;
+    transform: translate(-99%);
     text-align: right;
     width: 50%;
     padding: 0 40px;
     margin: 10px 0;
-    animation: slideInLeft 1s ease-in-out .7s 1 normal forwards;
+    animation-name: slideInLeft ;
+    animation-duration:1s ;
+    animation-timing-function: ease-in-out; 
+    animation-delay: .7s;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
     opacity: .9;
   }
   .links .slideLink:nth-child(even) button {
     text-align: right;
   }
 
-  @starting-style {
-    .links .slideLink div[popover]:popover-open,
-    .links .slideLink div[popover]:popover-open::backdrop {
-      opacity: 0;
-    }
-  }
 }
 
 @keyframes slideInRight {
-  from { translate: 99%; }
-  to   { translate: 10%; }
+  from { transform: translate(99%); }
+  to   { transform: skewX(10deg) translate( 20%); }
 }
 @keyframes slideInLeft {
-  from { translate: -99%; }
-  to   { translate: -10%; }
+  from { transform: translate( -99%); }
+  to   { transform: skewX(-10deg) translate(-20%); }
 }
-
 @starting-style {
   div[popover]:popover-open {
+    opacity: 0;
+  }
+  .links .slideLink div[popover]:popover-open,
+  .links .slideLink div[popover]:popover-open::backdrop {
     opacity: 0;
   }
 }
