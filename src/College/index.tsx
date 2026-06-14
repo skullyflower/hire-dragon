@@ -1,4 +1,5 @@
 import strings from './college.json';
+
 export const College = () => {
   return (
     <div className='wrapper'>

@@ -1,39 +1,5 @@
 import strings from './resume.json';
-
-const transformInlineContent = (text: string) => {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    const m = part.match(/^\*\*([^*]+)\*\*$/);
-    return m ? <strong key={i}>{m[1]}</strong> : part;
-  });
-};
-
-const transformContent = (string: string) => {
-  const match = string.match(/^\(([^)]+)\)\[([^\]]+)\]$/);
-  if (match) {
-    const url = match[2];
-    const text = match[1];
-    return (
-      <div key={string}>
-        <a
-          href={url}
-          target={url.startsWith('/') ? undefined : '_blank'}
-          rel={url.startsWith('/') ? undefined : 'noopener noreferrer'}
-        >
-          {text}
-        </a>
-      </div>
-    );
-  }
-  if (string.match(/^\*\*(.*)\*\*$/)) {
-    return (
-      <div key={string}>
-        <strong>{string.replace(/^\*\*(.*)\*\*$/, '$1')}</strong>
-      </div>
-    );
-  }
-  return <div key={string}>{string}</div>;
-};
+import { TransformContent, TransformInlineContent } from '../Utils';
 
 export const Resume = () => {
   return (
@@ -52,7 +18,7 @@ export const Resume = () => {
               }}
             >
               <strong>Contact:</strong>
-              {strings.contact.map((contact) => transformContent(contact))}
+              {strings.contact.map((contact) => TransformContent(contact))}
             </div>
             <div>
               <div>
@@ -103,7 +69,7 @@ export const Resume = () => {
                         )}
                         <ul style={{ paddingLeft: '1.5rem', margin: 0 }}>
                           {job.accomplishments.map((acc, j) => (
-                            <li key={j}>{transformInlineContent(acc)}</li>
+                            <li key={j}>{TransformInlineContent(acc)}</li>
                           ))}
                         </ul>
                       </div>
