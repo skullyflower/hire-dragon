@@ -36,10 +36,8 @@ describe('HireMe tests', () => {
     linksArray.forEach((link) => {
       if (link.extra && link.extra[0].length) {
         const btn = screen.getByRole('button', { name: link.name });
-        expect(btn).toHaveAttribute('popovertarget', link.name);
-        const popover = container.querySelector(
-          `[id="${link.name.replace(/[^\w]/g, '')}"][popover]`,
-        );
+        expect(btn).toHaveAttribute('popovertarget', link.href);
+        const popover = container.querySelector(`[id="${link.href}"][popover]`);
         expect(popover).toBeInTheDocument();
         expect(popover!).toHaveTextContent(link.extra[0]);
       }
