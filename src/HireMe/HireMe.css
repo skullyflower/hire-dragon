@@ -192,7 +192,6 @@ p {
     text-shadow: 0 0 4px #000;
   }
   .links .slideLink:nth-child(odd) {
-    transform: skewX(10deg);
     transform:translate(99%);
     align-self: flex-end;
     text-align: left;
@@ -232,11 +231,11 @@ p {
 
 @keyframes slideInRight {
   from { transform: translate(99%); }
-  to   { transform: skewX(10deg) translate( 20%); }
+  to   { transform: skewX(15deg) translate( 10%); }
 }
 @keyframes slideInLeft {
   from { transform: translate( -99%); }
-  to   { transform: skewX(-10deg) translate(-20%); }
+  to   { transform: skewX(-15deg) translate(-10%); }
 }
 @starting-style {
   div[popover]:popover-open {
