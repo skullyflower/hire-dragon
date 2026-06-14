@@ -54,7 +54,7 @@ export const HireMe = () => {
             <div className='links'>
               {linksArray.map((link: SlideLinkType) => (
                 <SlideLink
-                  key={link.name}
+                  key={link.name.replace(/[^\w]/g, '')}
                   name={link.name}
                   href={link.href}
                   extra={link.extra ?? null}

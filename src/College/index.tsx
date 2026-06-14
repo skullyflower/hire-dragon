@@ -5,7 +5,6 @@ export const College = () => {
       <main id='pagebody'>
         <section>
           <div className='content'>
-            {' '}
             <h1>{strings.heading}</h1>
             <div className='wraptop'>
               <div>
@@ -14,7 +13,7 @@ export const College = () => {
                 </h3>
                 <div style={{ textAlign: 'left' }}>
                   {strings.content.map((paragraph, i) => (
-                    <p key={`p-${i}`} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                    <p key={`p-${i}`}>{paragraph}</p>
                   ))}
                 </div>
               </div>

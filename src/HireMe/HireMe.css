@@ -230,11 +230,11 @@ p {
 }
 
 @keyframes slideInRight {
-  from { transform: translate(99%); }
+  from { transform: skewX(0deg) translate(99%); }
   to   { transform: skewX(15deg) translate( 10%); }
 }
 @keyframes slideInLeft {
-  from { transform: translate( -99%); }
+  from { transform: skewX(0deg) translate( -99%); }
   to   { transform: skewX(-15deg) translate(-10%); }
 }
 @starting-style {

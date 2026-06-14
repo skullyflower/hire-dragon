@@ -108,7 +108,13 @@ export const Resume = () => {
                 })}
               </div>
               <h3 style={{ textAlign: 'left' }}>Additional Experience</h3>
-              <div style={{ textAlign: 'left' }}></div>
+              <ul style={{ textAlign: 'left', paddingLeft: '1.5rem', margin: 0 }}>
+                {strings.additionalExperience.map((exp, i) => (
+                  <li key={`additional-${i}`}>
+                    <strong>{exp.role}:</strong> {exp.where}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
