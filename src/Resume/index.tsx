@@ -15,7 +15,11 @@ const transformContent = (string: string) => {
     const text = match[1];
     return (
       <div key={string}>
-        <a href={url} target='_blank' rel='noopener noreferrer'>
+        <a
+          href={url}
+          target={url.startsWith('/') ? undefined : '_blank'}
+          rel={url.startsWith('/') ? undefined : 'noopener noreferrer'}
+        >
           {text}
         </a>
       </div>
