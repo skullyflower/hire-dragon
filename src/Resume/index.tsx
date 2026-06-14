@@ -9,7 +9,7 @@ const transformInlineContent = (text: string) => {
 };
 
 const transformContent = (string: string) => {
-  const match = string.match(/^\((.*)\)\[(.*)\]$/);
+  const match = string.match(/^\(([^)]+)\)\[([^\]]+)\]$/);
   if (match) {
     const url = match[2];
     const text = match[1];
@@ -28,7 +28,7 @@ const transformContent = (string: string) => {
       </div>
     );
   }
-  return <div key={string} dangerouslySetInnerHTML={{ __html: string }} />;
+  return <div key={string}>{string}</div>;
 };
 
 export const Resume = () => {
