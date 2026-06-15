@@ -40,8 +40,6 @@ export const TransformInlineLinkedContent = (mdString: string) => {
   const parts = mdString.split(/(\([^)]+\)\[[^\]]+\])/g);
   return parts.map((part, i) => {
     const m = part.match(/\(([^)]+)\)\[([^\]]+)\]/);
-    console.log(m);
-
     return m ? (
       <a key={i} href={m[2]}>
         {m[1]}
