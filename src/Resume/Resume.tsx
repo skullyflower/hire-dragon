@@ -1,5 +1,9 @@
 import strings from './resume.json';
-import { TransformContent, TransformInlineContent } from '../Utils';
+import {
+  TransformContent,
+  TransformInlineBoldedContent,
+  TransformInlineLinkedContent,
+} from '../Utils';
 
 export const Resume = () => {
   return (
@@ -69,7 +73,7 @@ export const Resume = () => {
                         )}
                         <ul style={{ paddingLeft: '1.5rem', margin: 0 }}>
                           {job.accomplishments.map((acc, j) => (
-                            <li key={j}>{TransformInlineContent(acc)}</li>
+                            <li key={j}>{TransformInlineBoldedContent(acc)}</li>
                           ))}
                         </ul>
                       </div>
@@ -81,7 +85,7 @@ export const Resume = () => {
               <ul style={{ textAlign: 'left', paddingLeft: '1.5rem', margin: 0 }}>
                 {strings.additionalExperience.map((exp, i) => (
                   <li key={`additional-${i}`}>
-                    <strong>{exp.role}:</strong> {exp.where}
+                    <strong>{exp.role}:</strong> {TransformInlineLinkedContent(exp.where)}
                   </li>
                 ))}
               </ul>
