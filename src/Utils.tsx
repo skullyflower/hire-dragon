@@ -30,7 +30,6 @@ export const TransformContent = (mdString: string) => {
 export const TransformInlineBoldedContent = (mdString: string) => {
   // content is a line that might contain a bolded string
   const parts = mdString.split(/(\*\*[^*]+\*\*)/g);
-  console.log('[bold parts]', parts);
   return parts.map((part, i) => {
     const m = part.match(/^\*\*([^*]+)\*\*$/);
     return m ? <strong key={i}>{m[1]}</strong> : part;
@@ -39,7 +38,6 @@ export const TransformInlineBoldedContent = (mdString: string) => {
 export const TransformInlineLinkedContent = (mdString: string) => {
   // content is a line that might contain a bolded string
   const parts = mdString.split(/(\([^)]+\)\[[^\]]+\])/g);
-  console.log('[parts]', parts);
   return parts.map((part, i) => {
     const m = part.match(/\(([^)]+)\)\[([^\]]+)\]/);
     console.log(m);
