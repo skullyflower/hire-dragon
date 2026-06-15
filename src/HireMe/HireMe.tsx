@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import './HireMe.scss';
+import './HireMe.css';
 import textValues from './hireMe.json';
 
 type SlideLinkType = { name: string; href: string; extra: string[] | null };
 const SlideLink = ({ name, href, extra }: SlideLinkType) => {
   return (
     <div className='slideLink'>
-      <button popoverTarget={name}>{name}</button>
+      <button popoverTarget={href}>{name}</button>
       {extra && (
-        <div popover='auto' id={name} onClick={() => window.open(href, name)}>
+        <div popover='auto' id={href} onClick={() => window.open(href, name)}>
           <a href={href} target={name} rel='noopener'>
             <h2>{name}</h2>
             <hr />
@@ -54,7 +54,7 @@ export const HireMe = () => {
             <div className='links'>
               {linksArray.map((link: SlideLinkType) => (
                 <SlideLink
-                  key={link.name}
+                  key={link.href}
                   name={link.name}
                   href={link.href}
                   extra={link.extra ?? null}
