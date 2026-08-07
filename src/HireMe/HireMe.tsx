@@ -8,9 +8,14 @@ const SlideLink = ({ name, href, extra }: SlideLinkType) => {
     <div className='slideLink'>
       <button popoverTarget={href}>{name}</button>
       {extra && (
-        <div popover='auto' id={href} onClick={() => window.open(href, name)}>
-          <a href={href} target={name} rel='noopener'>
+        <div popover='auto' id={href}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <h2>{name}</h2>
+            <button popoverTarget={href} popoverTargetAction='hide'>
+              close
+            </button>
+          </div>
+          <a href={href} target={name} rel='noopener'>
             <hr />
             {extra?.map((p, i) => (
               <p key={i}>{p}</p>
