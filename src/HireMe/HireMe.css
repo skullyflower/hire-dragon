@@ -238,7 +238,12 @@ p {
   .links .slideLink:nth-child(even) button {
     text-align: right;
   }
-
+ .links .slideLink:hover {
+  width: 107%;
+ }
+ .links .slideLink:hover button{
+  text-align: center;
+ }
 }
 
 @keyframes slideInRight {
