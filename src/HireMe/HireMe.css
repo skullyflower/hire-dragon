@@ -7,9 +7,8 @@ html * {
   font-family: 'Work Sans', sans-serif;
   color-scheme: light dark;
 }
-
+body #root{padding: 0;margin:0}
 .wrapper {
-  max-width: 1139px;
   margin: 0 auto;
 }
 
@@ -36,19 +35,17 @@ main {
 .content {
   background: url('/arrow-up-down-circle.svg') -150px -150px #111;
   background-size: 20em;
-  border: 2px solid #567;
   border-radius: 10px;
-  margin-bottom: 5px;
-  margin-top: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
   padding-bottom: 50px;
+  height:100%;
 }
 
 .wraptop {
-  padding-inline: 20px;
+  padding: 20px;
 }
 
 .description {
@@ -118,6 +115,7 @@ p {
   cursor: pointer;
   display: block;
   width: 100%;
+  height:12vh;
   border: none;
   background: none;
   color: #a1df51;
@@ -151,12 +149,13 @@ p {
 .links .slideLink:nth-child(12) { background-color: #567;                animation-delay: 1.5s; }
 .links .slideLink:nth-child(12) div { background-color: inherit; }
 .links .slideLink div[popover] {
-  margin-inline: 20%;
+  margin-inline: auto;
   text-align: left;
   border-radius: 10px;
   border: 2px solid #000;
   box-shadow: 5px 5px 10px #333;
   transition: 0.7s opacity, 0.7s;
+  max-width: 85vw;
   max-height: 85vh;
   overflow: auto;
 }
